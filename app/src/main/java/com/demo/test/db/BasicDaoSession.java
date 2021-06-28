@@ -1,9 +1,9 @@
-package com.datab.cn.db;
+package com.demo.test.db;
 
 import android.database.sqlite.SQLiteDatabase;
 
-import com.datab.cn.dao.UnitDao;
-import com.datab.cn.pojo.Unit;
+import com.demo.test.dao.UnitDao;
+import com.demo.test.pojo.Unit;
 
 import java.util.Map;
 

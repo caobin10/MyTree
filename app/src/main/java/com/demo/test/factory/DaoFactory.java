@@ -1,11 +1,11 @@
-package com.datab.cn.factory;
+package com.demo.test.factory;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.datab.cn.dao.UnitDao;
-import com.datab.cn.db.BasicDaoMaster;
-import com.datab.cn.db.BasicDaoSession;
+import com.demo.test.dao.UnitDao;
+import com.demo.test.db.BasicDaoMaster;
+import com.demo.test.db.BasicDaoSession;
 
 /**
  * Created by Administrator on 2021/6/22.

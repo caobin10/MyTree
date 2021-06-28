@@ -1,4 +1,4 @@
-package com.datab.cn.ui;
+package com.demo.test.ui;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,16 +12,11 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-
-import com.datab.cn.R;
-import com.datab.cn.adapter.Solve7UnitTreeAdapter;
-import com.datab.cn.bean.User;
-import com.datab.cn.manager.AppApplication;
-import com.datab.cn.pojo.Unit;
-
+import com.demo.test.R;
+import com.demo.test.adapter.Solve7UnitTreeAdapter;
+import com.demo.test.pojo.Unit;
 import java.util.ArrayList;
 import java.util.List;
-
 import test.tree.adapter.Solve7ITreeAllAdapter;
 import test.tree.common.ViewHolder;
 
@@ -31,7 +26,6 @@ import test.tree.common.ViewHolder;
 
 public class UnitTextView extends TextView {
 
-    private User user;
     private UnitCodeCallBack finishRecorderCallBack;
     private Solve7PopupWindow popupWindow;
 
@@ -46,25 +40,26 @@ public class UnitTextView extends TextView {
     }
 
     private void init(final Context context) {
+        Unit unit = new Unit();
+        unit.setUnitCode("00000-00013-00098-00001");
+        unit.setUnitName("xx市2");
+        unit.setParentCode("00000-00013-00098");
+        unit.setRemark(null);
 
-        AppApplication application = (AppApplication) context.getApplicationContext();
-
-        user = application.getUser();
-        user.getUnit().setRemark(null);
-        createUnitTree(context, user.getUnit());
+        createUnitTree(context, unit);
         setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 //弹出前  隐藏键盘 防止显示位置错误
-                InputMethodManager imm = (InputMethodManager)((Activity)context). getSystemService(Context.INPUT_METHOD_SERVICE);
+                InputMethodManager imm = (InputMethodManager) ((Activity) context).getSystemService(Context.INPUT_METHOD_SERVICE);
                 if (imm != null) {
                     imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
                 }
 
-                if(popupWindow.isShowing()){
+                if (popupWindow.isShowing()) {
                     popupWindow.dismiss();
-                }else{
+                } else {
 //                    popupWindow.showAsDropDown(v);
                     showPopupWindow(popupWindow, v);
                 }

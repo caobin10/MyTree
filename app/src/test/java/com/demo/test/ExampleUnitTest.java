@@ -1,4 +1,4 @@
-package com.datab.cn;
+package com.demo.test;
 
 import org.junit.Test;
 

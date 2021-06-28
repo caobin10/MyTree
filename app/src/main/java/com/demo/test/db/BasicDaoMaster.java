@@ -1,4 +1,4 @@
-package com.datab.cn.db;
+package com.demo.test.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
 import android.util.Log;
 
-import com.datab.cn.dao.UnitDao;
-import com.datab.cn.manager.AppConfig;
+import com.demo.test.dao.UnitDao;
+import com.demo.test.manager.AppConfig;
 
 import de.greenrobot.dao.AbstractDaoMaster;
 import de.greenrobot.dao.identityscope.IdentityScopeType;
@@ -22,12 +22,12 @@ public class BasicDaoMaster extends AbstractDaoMaster {
         super(db, SCHEMA_VERSION);
         registerDaoClass(UnitDao.class);
     }
-    public static void createTables(SQLiteDatabase db, boolean ifNotExists){
-//		UnitDao.createTable(db, ifNotExists);
-    }
-    public static void dropTables(SQLiteDatabase db, boolean ifExists){
+//    public static void createTables(SQLiteDatabase db, boolean ifNotExists){
+////		UnitDao.createTable(db, ifNotExists);
+//    }
+//    public static void dropTables(SQLiteDatabase db, boolean ifExists){
 //		UnitDao.dropTable(db, ifExists);
-    }
+//    }
     @Override
     public BasicDaoSession newSession() {
         return new BasicDaoSession(db, IdentityScopeType.Session,daoConfigMap);
@@ -47,8 +47,8 @@ public class BasicDaoMaster extends AbstractDaoMaster {
 
         @Override
         public void onCreate(SQLiteDatabase db) {
-            Log.i("onCreate", "onCreate");
-            createTables(db, false);
+//            Log.i("onCreate", "onCreate");
+//            createTables(db, false);
         }
 
         @Override
@@ -68,7 +68,7 @@ public class BasicDaoMaster extends AbstractDaoMaster {
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
             Log.i("onUpgrade", "onUpgrade");
-            dropTables(db, true);
+//            dropTables(db, true);
             onCreate(db);
         }
     }

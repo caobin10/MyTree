@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <com.datab.cn.ui.UnitTextView
+    <com.demo.test.ui.UnitTextView
         android:id="@+id/tv_unit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_select_input"
         android:gravity="center_vertical"
+        android:text="点击"
         android:textColor="@color/black"
         android:textCursorDrawable="@null"
-        android:textSize="18.0sp" />
+        android:textSize="25dp" />
 
 </LinearLayout>

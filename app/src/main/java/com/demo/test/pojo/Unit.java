@@ -1,4 +1,4 @@
-package com.datab.cn.pojo;
+package com.demo.test.pojo;
 
 /**
  * Created by Administrator on 2021/6/21.
@@ -10,7 +10,7 @@ public class Unit {
     private String parentCode;
     private String remark;
 
-    public Unit(){
+    public Unit() {
 
     }
 
