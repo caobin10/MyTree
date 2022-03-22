@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MyTree.iml" filepath="$PROJECT_DIR$/MyTree.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/c.iml" filepath="$PROJECT_DIR$/c.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tree/tree.iml" filepath="$PROJECT_DIR$/tree/tree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MyTree.iml" filepath="$PROJECT_DIR$/.idea/modules/MyTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MyTree.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MyTree.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tree/MyTree.tree.iml" filepath="$PROJECT_DIR$/.idea/modules/tree/MyTree.tree.iml" />
     </modules>
   </component>
 </project>
